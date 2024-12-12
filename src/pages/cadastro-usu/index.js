@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
@@ -18,7 +17,7 @@ export default function CadastroUsuario() {
             usustatus: usustatus.value
         }
         api
-            .post("/", usuarioSalvar)
+            .post("/usuarios/", usuarioSalvar)
             .then((res) => {
                 console.log(res.data);
                 alert("Loja salva com sucesso!");
