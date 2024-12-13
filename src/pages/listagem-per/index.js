@@ -8,12 +8,25 @@ export default function ListagemPersonagem() {
 
   const getPersonagem = () => {
     api
-      .get("/personagem/")
-      .then((result) => {
-        setPersonagem(result.data);
+      .get("/personagens/")
+      .then(async (result) => {
+        var listaPersonagens = result.data;
+      
+        for (let per of listaPersonagens) {
+          if (per.perimagem)
+          await api
+          .get(`/personagens/upload/${per.perimagem}`, {
+            responseType: "blob",
+          }).then((res) => {
+            const { data } = res;
+            per.preview = URL.createObjectURL(data);
+            });
+          }
+          console.log(listaPersonagens)
+        setPersonagem(listaPersonagens);
       })
       .catch((err) => console.log(err));
-  };
+      };
 
   useEffect(() => {
     getPersonagem();
@@ -28,5 +41,5 @@ export default function ListagemPersonagem() {
         ))}
       </div>
     </>
-  );
+  )
 }

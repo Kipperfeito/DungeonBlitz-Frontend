@@ -1,14 +1,15 @@
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import styles from "@/styles/styles.module.css"
 export default function Header() {
   return (
-    <Navbar bg="dark" data-bs-theme="dark" expand="lg">
+    <Navbar bg="danger" data-bs-theme="dark" expand="lg">
       <Container>
-        <Navbar.Brand href="/Aula">DAW II</Navbar.Brand>
+        <Navbar.Brand href="/"><img src="DungeonBlitzLogoFull_400x400.png" className={styles.foto}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <NavDropdown title="Personagem" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/cadastro-per"
+          <Nav className="me-auto" bg="light" >
+            <NavDropdown title="Personagem" id="basic-nav-dropdown" data-bs-theme="light">
+              <NavDropdown.Item href="/cadastro-per" bg="light"
               >
                 Cadastro de Personagem
               </NavDropdown.Item>
@@ -16,7 +17,7 @@ export default function Header() {
                 Lista Personagens
               </NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Atributo" id="basic-nav-dropdown">
+            <NavDropdown title="Atributo" id="basic-nav-dropdown" data-bs-theme="light">
               <NavDropdown.Item href="/cadastro-atr"
               >
                 Cadastro de Atributo
@@ -25,7 +26,7 @@ export default function Header() {
                 Lista de Atributos
               </NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Usuário" id="basic-nav-dropdown">
+            <NavDropdown title="Usuário" id="basic-nav-dropdown" data-bs-theme="light">
               <NavDropdown.Item href="/cadastro-usu">Cadastro</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/logout">Sair</NavDropdown.Item>

@@ -14,7 +14,7 @@ export default function CadastroPersonagem() {
                 headers: { "Content-Type": "multipart/form-data" }
             });
             alert("Personagem salvo com sucesso!");
-            router.push("/listagem-personagens");
+            router.push("/listagem-per");
         } catch (err) {
             console.error("Erro ao salvar personagem:", err);
             alert("Ocorreu um erro ao salvar o personagem!");
@@ -31,9 +31,15 @@ export default function CadastroPersonagem() {
                     <input type="text" id="pernome" name="pernome" required /> 
 
                     <label htmlFor="perclasse">Classe: </label>
-                    <input type="text" id="perclasse" name="perclasse" required /> 
+                    {/* <input type="text" id="perclasse" name="perclasse" required />  */}
+                    <select id="perclasse" name="perclasse" required>
+                        <option value="">Selecione a classe</option>
+                        <option value="Paladadino">Paladadino</option>
+                        <option value="Assasino">Assasino</option>
+                        <option value="Mago">Mago</option>
+                    </select>
 
-                    <label htmlFor="foto">Imagem: </label>
+                    <label htmlFor="perimagem">Imagem: </label>
                     <input type="file" id="perimagem" name="perimagem" accept="image/png, image/jpg, image/jpeg" /> 
 
                     <label htmlFor="perexperiencia">Experiência: </label>

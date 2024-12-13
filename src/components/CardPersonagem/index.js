@@ -27,7 +27,7 @@ export default function CardPersonagem({ personagem }) {
       <span>Pontos de Vida: {personagem.perpontosvida}</span>
       <span>Mana: {personagem.permana}</span>
       {personagem.perimagem && (
-        <img src={personagem.perimagem} alt={personagem.pernome} className={styles.image} />
+        <img src={personagem.preview ?? "https://encurtador.com.br/h8cW7"} alt={personagem.pernome} className={styles.image} />
       )}
       <button
         type="button"

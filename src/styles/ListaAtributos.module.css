@@ -12,6 +12,7 @@
     padding: 20px;
     justify-items: center;
     margin: 0 auto;
+    background-color: #1a1a2e;
   }
   
   @media (max-width: 768px) {

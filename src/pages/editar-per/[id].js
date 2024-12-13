@@ -28,7 +28,7 @@ export default function EditarPersonagem() {
         headers: { "Content-Type": "multipart/form-data" },
       });
       alert("Personagem editado com sucesso!");
-      router.push("/listagem-personagens");
+      router.push("/listagem-per");
     } catch (err) {
       console.error("Erro ao editar personagem:", err);
       alert("Ocorreu um erro ao editar o personagem!");

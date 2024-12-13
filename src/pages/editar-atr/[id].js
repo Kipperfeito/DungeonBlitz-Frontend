@@ -40,7 +40,7 @@ export default function EditarAtributos() {
             .then((res) => {
                 console.log(res);
                 alert("Atributos editados com sucesso!");
-                router.push("/listagem-atributos");
+                router.push("/listagem-atr");
             })
             .catch((err) => {
                 console.error(err);
