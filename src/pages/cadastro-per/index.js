@@ -34,7 +34,7 @@ export default function CadastroPersonagem() {
                     {/* <input type="text" id="perclasse" name="perclasse" required />  */}
                     <select id="perclasse" name="perclasse" required>
                         <option value="">Selecione a classe</option>
-                        <option value="Paladadino">Paladadino</option>
+                        <option value="Paladino">Paladino</option>
                         <option value="Assasino">Assasino</option>
                         <option value="Mago">Mago</option>
                     </select>
