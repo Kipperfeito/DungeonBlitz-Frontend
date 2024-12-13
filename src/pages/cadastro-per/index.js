@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import api from "@/services/api";
+import styles from "@/styles/Form.module.css" ;
 
 export default function CadastroPersonagem() {
     const router = useRouter();
@@ -23,28 +24,30 @@ export default function CadastroPersonagem() {
 
     return (
         <>
-            <h3>Formulário de Cadastro de Personagens</h3>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="pernome">Nome: </label>
-                <input type="text" id="pernome" name="pernome" required /> 
+            <div className={styles.container}>
+                <h3>Formulário de Cadastro de Personagens</h3>
+                <form onSubmit={handleSubmit}  className={styles.formCadastro}>
+                    <label htmlFor="pernome">Nome: </label>
+                    <input type="text" id="pernome" name="pernome" required /> 
 
-                <label htmlFor="perclasse">Classe: </label>
-                <input type="text" id="perclasse" name="perclasse" required /> 
+                    <label htmlFor="perclasse">Classe: </label>
+                    <input type="text" id="perclasse" name="perclasse" required /> 
 
-                <label htmlFor="foto">Imagem: </label>
-                <input type="file" id="perimagem" name="perimagem" accept="image/png, image/jpg, image/jpeg" /> 
+                    <label htmlFor="foto">Imagem: </label>
+                    <input type="file" id="perimagem" name="perimagem" accept="image/png, image/jpg, image/jpeg" /> 
 
-                <label htmlFor="perexperiencia">Experiência: </label>
-                <input type="number" id="perexperiencia" name="perexperiencia" defaultValue={0} /> 
+                    <label htmlFor="perexperiencia">Experiência: </label>
+                    <input type="number" id="perexperiencia" name="perexperiencia" defaultValue={0} /> 
 
-                <label htmlFor="perpontosvida">Pontos de Vida: </label>
-                <input type="number" id="perpontosvida" name="perpontosvida" defaultValue={100} /> 
+                    <label htmlFor="perpontosvida">Pontos de Vida: </label>
+                    <input type="number" id="perpontosvida" name="perpontosvida" defaultValue={100} /> 
 
-                <label htmlFor="permana">Mana: </label>
-                <input type="number" id="permana" name="permana" defaultValue={50} /> 
+                    <label htmlFor="permana">Mana: </label>
+                    <input type="number" id="permana" name="permana" defaultValue={50} /> 
 
-                <button type="submit">Adicionar</button>
-            </form>
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
         </>
     );
 }

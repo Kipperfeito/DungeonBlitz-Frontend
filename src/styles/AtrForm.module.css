@@ -6,9 +6,9 @@
 
 .formCadastro {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: fit-content;
-  gap: 1rem;
+  gap: 0.3rem;
   margin-top: 1rem;
 }
 

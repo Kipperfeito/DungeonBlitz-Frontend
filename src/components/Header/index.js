@@ -8,16 +8,25 @@ export default function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <NavDropdown title="Personagem" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/cadastro-personagem"
+              <NavDropdown.Item href="/cadastro-per"
               >
                 Cadastro de Personagem
               </NavDropdown.Item>
-              <NavDropdown.Item href="/listagem-personagem">
+              <NavDropdown.Item href="/listagem-per">
                 Lista Personagens
               </NavDropdown.Item>
             </NavDropdown>
+            <NavDropdown title="Atributo" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/cadastro-atr"
+              >
+                Cadastro de Atributo
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/listagem-atr">
+                Lista de Atributos
+              </NavDropdown.Item>
+            </NavDropdown>
             <NavDropdown title="Usuário" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/perfil">Perfil</NavDropdown.Item>
+              <NavDropdown.Item href="/cadastro-usu">Cadastro</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/logout">Sair</NavDropdown.Item>
             </NavDropdown>
